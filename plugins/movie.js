@@ -100,7 +100,7 @@ let msg2 = `*_INFINITY MOVIE BOT MOVIE INFO_*
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
 
-await conn.sendMessage(from,{image:{url: mv_info.result.images[0]},caption:msg2},{quoted:mek})
+await conn.sendMessage(from,{image:{url: mv_info2.result.images[0]},caption:msg2},{quoted:mek})
 
     }
            
@@ -174,7 +174,7 @@ let msg2 = `🍟 *${mv_info2.result.title}*
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
 
-await conn.sendMessage(id ,{image:{url: mv_info.result.images[0]},caption:msg2},{quoted:mek})
+await conn.sendMessage(id ,{image:{url: mv_info2.result.images[0]},caption:msg2},{quoted:mek})
 
 }
     
