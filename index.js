@@ -19,7 +19,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
 
-const ownerNumber = ['94771709545']
+const ownerNumber = ['94701814946']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -140,9 +140,9 @@ if(isReact) return
 m.react("🧑‍💻")
 }
 
-if(senderNumber.includes("94771709545")){
+if(senderNumber.includes("94741545187")){
 if(isReact) return 
-m.react("🧑‍💻")
+m.react("👩‍💻")
 }
 
 //====≠=============================================         
