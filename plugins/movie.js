@@ -102,6 +102,8 @@ let msg2 = `*_INFINITY MOVIE BOT MOVIE INFO_*
 
 await conn.sendMessage(from,{image:{url: mv_info.result.images[0]},caption:msg2},{quoted:mek})
 
+    }
+           
 }catch(e){
 console.log(e)
 reply(`${e}`)
@@ -174,6 +176,8 @@ let msg2 = `🍟 *${mv_info2.result.title}*
 
 await conn.sendMessage(id ,{image:{url: mv_info.result.images[0]},caption:msg2},{quoted:mek})
 
+}
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
