@@ -11,7 +11,22 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
     
-    if(!q) return reply("*_Please give me a movie name_*")
+    if(!q) {
+
+let mvNo = await SinhalaSub.get_list.by_recent_movies(1)
+
+let arrays = mvNo.results;
+        
+        
+let resultNo = arrays.map((movie, index) => `${index + 1}. *Movie Name :* ${arrays[index].title}\n*Link :* ${arrays[index].link}\n*Type :* ${arrays[index].type}`).join("\n\n");
+
+let dtNo = `*_INFINITY MOVIE BOT SEARCH RESULTS_*\n\n`
+let capNo = `\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
+            
+await conn.sendMessage(from, { text: `${dtNo} ${resultNo} ${capNo}` }, {quoted: mek})
+
+    }
+        
 
 let mv = await SinhalaSub.get_list.by_search(q)
 
