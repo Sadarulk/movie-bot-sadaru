@@ -13,7 +13,7 @@ try{
 
     let a = q
 
-let b = a.split("&")
+let b = a.split(" & ")
 
 let c = b[0]
 let d = b[1]
