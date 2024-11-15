@@ -17,8 +17,6 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available qualities : 1080p , 720p , 480p )")
 
-let mv = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
-
 let x = q
         
 let a = x.split("&")
@@ -26,7 +24,8 @@ let a = x.split("&")
 let b = a[0]
 let c = a[1]
 
-
+let mv = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
+        
 function getDownloadLinkByQuality(quality) {
   
   const filteredLinks = mv.result.data.dl_links.filter(link => link.quality === quality && link.link.includes("pixeldrain.com"));
