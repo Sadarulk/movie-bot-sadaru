@@ -48,7 +48,7 @@ let cap = `${mv.result.data.title} ( ${c} )
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
         
-      await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
+       conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
 if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160p') {
 
@@ -56,10 +56,10 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
 
 }
 }
-    }
+    
 } catch(e) {
 console.log(e)
-await conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
+ conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
 
 }
 })
