@@ -55,7 +55,7 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
     return reply("*Invalid quality input.*\n\n*Available quality inputs :* FHD 1080p , HD 720p , SD 480p")
 
 }
-    
+}   
 } catch(e) {
 console.log(e)
  conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
