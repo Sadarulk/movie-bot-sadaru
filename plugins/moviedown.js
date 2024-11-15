@@ -51,7 +51,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, rep
         const downloadUrl = filteredLinks[0].link.replace('/u/', '/api/file/');
 
         // Prepare caption and send the document
-        const caption = `${mv.result.data.title} (${qualityInput})\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`;
+        const caption = `${mv.result.data.title} ( ${qualityInput} )\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`;
 
         await conn.sendMessage(
             from,
