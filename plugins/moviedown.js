@@ -12,12 +12,19 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, reply }) => {
     try {
+
+const premUsers = ['94701814946', '94754900516', '94759554531', '94771709545'];
+        if (!senderNumber.includes(premUsers)) {
+            return reply(
+                "*You have not access to download movies.Please contact the owner to get access for movie downloads.*\n\nOwner : 94701814946"
+                
+            );
+        }
+        
         // Validate input
         if (!q || !q.startsWith("https://sinhalasub.lk/")) {
             return reply(
-                "*_Please provide a valid sinhalasub.lk URL & quality._*\n\n" +
-                "*Example :-* .moviedl url & quality\n\n" +
-                "( Available quality inputs: FHD 1080p, HD 720p, SD 480p )"
+                "*_Please provide a valid sinhalasub.lk URL & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available quality inputs: FHD 1080p, HD 720p, SD 480p )"
             );
         }
 
@@ -33,8 +40,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, rep
         const availableQualities = ['SD 480p', 'HD 720p', 'FHD 1080p'];
         if (!availableQualities.includes(qualityInput)) {
             return reply(
-                "*Invalid quality input.*\n\n" +
-                "*Available quality inputs:* SD 480p, HD 720p, FHD 1080p"
+                "*Invalid quality input.*\n\n*Available quality inputs:* SD 480p, HD 720p, FHD 1080p"
             );
         }
 
