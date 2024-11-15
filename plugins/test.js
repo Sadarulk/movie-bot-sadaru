@@ -41,7 +41,7 @@ const result = array.map((movie, index) => `${index + 1}. *Quality :* ${array[in
             
 await conn.sendMessage(from, { text: `${dt} ${result} ${cap}` }, {quoted: mek})
 
-          if(quoted === "1") return reply(`Hi there`)  
+          if(quoted.body === "1") return reply(`Hi there`)  
 
 }catch(e){
 console.log(e)
