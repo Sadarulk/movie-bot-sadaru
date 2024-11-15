@@ -5,7 +5,7 @@ const { cmd, commands } = require('../command');
 const apilink = 'https://dark-yasiya-api-new.vercel.app';
 
 cmd({
-    pattern: "test2",
+    pattern: "moviedl",
     desc: "download movies",
     category: "movie",
     filename: __filename
