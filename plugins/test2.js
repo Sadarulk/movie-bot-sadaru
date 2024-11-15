@@ -32,10 +32,14 @@ function getDownloadLinkByQuality(quality) {
   
   if (filteredLinks.length > 0) {
     return filteredLinks.map(link => link.link);  // Return all Pixeldrain links matching the quality
-  } else {
-    return reply(`*_Can't find dl link._*`);  // Return a message if no match is found
-  }
+ 
 }
+
+        if(!filteredLinks) {
+            const availableQuality = mv.result.data.dl_links.map(link => link.quality).join(',');
+
+            return reply(`Not download links found ${quality}. Available qualities : ${availableQuality}`);
+        }
 
 let qualityInput = c
 let resultLinks = getDownloadLinkByQuality(qualityInput)
