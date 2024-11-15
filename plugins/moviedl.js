@@ -17,9 +17,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available qualities : 1080p , 720p , 480p )")
 
- if(q.startsWith("https://")) {
-
-let a = q.split("&")
+let x = q
+        
+let a = x.split("&")
 
 let b = a[0]
 let c = a[1]
@@ -69,8 +69,9 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
         await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
 
-}
-} 
+} else { 
+
+    return reply("*Invalid quality.*\n\n*Available qualities :* 1080p , 720p , 480p")
     
         
 }catch(e){
