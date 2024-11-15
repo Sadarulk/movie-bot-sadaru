@@ -25,20 +25,20 @@ let capNo = `\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇ�
             
 await conn.sendMessage(from, { text: `${dtNo} ${resultNo} ${capNo}` }, {quoted: mek})
 
-    }
+    } else {
         
-
 let mv = await SinhalaSub.get_list.by_search(q)
 
 let array = mv.results;
         
-
 let result = array.map((movie, index) => `${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}\n*Type :* ${array[index].type}`).join("\n\n");
 
 let dt = `*_INFINITY MOVIE BOT SEARCH RESULTS_*\n\n`
 let cap = `\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
             
 await conn.sendMessage(from, { text: `${dt} ${result} ${cap}` }, {quoted: mek})
+
+    }
 
 }catch(e){
 console.log(e)
