@@ -30,11 +30,11 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, rep
         const mv = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${movieUrl}`);
 
         // Validate the provided quality
-        const availableQualities = ['SD 480p', 'HD 720p', 'FHD 1080p', '4K 2160p'];
+        const availableQualities = ['SD 480p', 'HD 720p', 'FHD 1080p'];
         if (!availableQualities.includes(qualityInput)) {
             return reply(
                 "*Invalid quality input.*\n\n" +
-                "*Available quality inputs:* FHD 1080p, HD 720p, SD 480p, 4K 2160p"
+                "*Available quality inputs:* SD 480p, HD 720p, FHD 1080p"
             );
         }
 
