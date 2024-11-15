@@ -26,60 +26,8 @@ let b = a[0]
 let c = a[1]
 let d = a[2]
 
-if(d.length > 0) {
+if(!d) {
 
-if(c === " 1080p") {
-
-let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
-
-let url = `${mv_info.result.data.dl_links[0].link}`;
-
-// Replace '/u/' with '/api/file/'
-let updatedUrl = url.replace('/u/', '/api/file/');
-
-let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].quality} )
-
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
-        
-       await conn.sendMessage( d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
-
-} else if(c === " 720p") {
-
-let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
-
-let url = `${mv_info.result.data.dl_links[1].link}`;
-
-// Replace '/u/' with '/api/file/'
-let updatedUrl = url.replace('/u/', '/api/file/');
-
-        let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[1].quality} )
-
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
-
-        await conn.sendMessage( d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
-
-} else if(c === " 480p") {
-
-let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
-
-let url = `${mv_info.result.data.dl_links[2].link}`;
-
-// Replace '/u/' with '/api/file/'
-let updatedUrl = url.replace('/u/', '/api/file/');
-
-        let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[2].quality} )
-
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
-
-        await conn.sendMessage( d ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
-
-} else { 
-
-    return reply("*Invalid quality input.*\n\n*Available quality inputs :* 1080p , 720p , 480p")
-
-}
-
-} else {
 
 if(c === " 1080p") {
 
@@ -125,6 +73,58 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
         await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+
+} else { 
+
+    return reply("*Invalid quality input.*\n\n*Available quality inputs :* 1080p , 720p , 480p")
+
+}
+} else {
+
+if(c === " 1080p") {
+
+let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
+
+let url = `${mv_info.result.data.dl_links[0].link}`;
+
+// Replace '/u/' with '/api/file/'
+let updatedUrl = url.replace('/u/', '/api/file/');
+
+let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
+        
+       await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+
+} else if(c === " 720p") {
+
+let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
+
+let url = `${mv_info.result.data.dl_links[1].link}`;
+
+// Replace '/u/' with '/api/file/'
+let updatedUrl = url.replace('/u/', '/api/file/');
+
+        let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[1].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
+
+        await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+
+} else if(c === " 480p") {
+
+let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
+
+let url = `${mv_info.result.data.dl_links[2].link}`;
+
+// Replace '/u/' with '/api/file/'
+let updatedUrl = url.replace('/u/', '/api/file/');
+
+        let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[2].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
+
+        await conn.sendMessage(d ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
 
 } else { 
 
