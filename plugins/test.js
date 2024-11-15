@@ -26,7 +26,7 @@ let b = a[0]
 let c = a[1]
 let d = a[2]
 
-if(d) {
+if(d.length > 0) {
 
 if(c === " 1080p") {
 
