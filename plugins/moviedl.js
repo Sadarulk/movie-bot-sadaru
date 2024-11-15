@@ -15,14 +15,14 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
     if (!q && !q.startsWith("https://sinhalasub.lk/"))
 
-return reply("*_Please give me a movie name or sinhalasub.lk url._*")
+return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available qualities : 1080p , 720p , 480p )")
 
  if(q.startsWith("https://")) {
 
-let a = q.split(",")
+let a = q.split("&")
 
-let b = b[0]
-let c = b[1]
+let b = a[0]
+let c = a[1]
 
 if(c === "1080p") {
 
