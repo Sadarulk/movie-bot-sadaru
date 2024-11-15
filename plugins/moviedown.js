@@ -14,10 +14,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
 
 const premUsers = ['94701814946', '94754900516', '94759554531', '94771709545'];
-        if (!senderNumber === premUsers) {
+        
+        // Check if the user is premium
+        if (!premUsers.includes(senderNumber)) {
             return reply(
-                "*You have not access to download movies.Please contact the owner to get access for movie downloads.*\n\nOwner : 94701814946"
-                
+                "*_You don't have access to download movies. Please contact the owner to get access._*\n\n*Owner:* 94701814946"
             );
         }
         
