@@ -167,7 +167,7 @@ let msg = `🍟 *${mv_info.result.title}*
 
 🤵‍♂ *Director* : ${mv_info.result.director.name}
 
-🖇️ *Link* : ${q}
+🖇️ *Link* : ${b}
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
 
@@ -224,7 +224,7 @@ let msg = `🍟 *${mv_info.result.title}*
 
 🤵‍♂ *Director* : ${mv_info.result.director.name}
 
-🖇️ *Link* : ${q}
+🖇️ *Link* : ${b}
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
 
