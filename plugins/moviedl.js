@@ -72,8 +72,9 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 } else { 
 
     return reply("*Invalid quality.*\n\n*Available qualities :* 1080p , 720p , 480p")
-    
-        
+
+}
+         
 }catch(e){
 console.log(e)
 reply(`${e}`)
