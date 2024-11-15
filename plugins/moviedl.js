@@ -37,7 +37,7 @@ let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qual
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
         
-       await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+       await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
 } else if(c === " 720p") {
 
@@ -52,7 +52,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-        await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
 } else if(c === " 480p") {
 
@@ -67,7 +67,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-        await conn.sendMessage( from ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage( from ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
 } else { 
 
