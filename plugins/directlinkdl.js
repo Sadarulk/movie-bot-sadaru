@@ -20,11 +20,11 @@ let d = b[1]
 
 if(!d) {
 
-await conn.sendMessage(from,{document: {url: c },mimetype:"video/mp4",fileName: "🎬 INFINITY MOVIE BOT 🎬" + ".mp4",caption:"> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url: c },mimetype:"video/mp4",fileName: "🎬 INFINITY MOVIE BOT 🎬" + ".mp4",caption:"> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ"},{quoted:mek})
 
 } else {
     
-await conn.sendMessage(from,{document: {url: c },mimetype:"video/mp4",fileName: d + ".mp4",caption:"> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url: c },mimetype:"video/mp4",fileName: d + ".mp4",caption:"> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ"},{quoted:mek})
 
 }
     
