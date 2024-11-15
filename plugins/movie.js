@@ -30,6 +30,8 @@ await conn.sendMessage(from, { text: `${dtNo} ${resultNo} ${capNo}` }, {quoted: 
 let mv = await SinhalaSub.get_list.by_search(q)
 
 let array = mv.results;
+
+        if(!array) return reply("*_Can't find this movie !_*")
         
 let result = array.map((movie, index) => `${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}\n*Type :* ${array[index].type}`).join("\n\n");
 
