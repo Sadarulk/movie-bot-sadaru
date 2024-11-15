@@ -33,26 +33,16 @@ function getDownloadLinkByQuality(quality) {
   if (filteredLinks.length > 0) {
     return filteredLinks.map(link => link.link);  // Return all Pixeldrain links matching the quality
   } else {
-    return reply(`Not found in your quality`);  // Return a message if no match is found
+    return reply(`*_Not found in your quality._*`);  // Return a message if no match is found
   }
 }
 
-const qualityInput = c
-const resultLinks = getDownloadLinkByQuality(qualityInput);
+let qualityInput = c
+let resultLinks = getDownloadLinkByQuality(qualityInput)
 
-let updatedUrl = resultLinks.replace('/u/', '/api/file/');
+        return reply(`${resultLinks}`)
 
-let cap = `${mv.result.data.title} ( ${c} )
 
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
-        
-       await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`})
-
-if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160p') {
-
-    return reply("*Invalid quality inputs.*\n\n*Available quality inputs :* FHD 1080p , HD 720p , SD 480p")
-
-}
          
 }catch(e){
 console.log(e)
