@@ -20,7 +20,7 @@ return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* 
 
 let x = q
         
-let a = x.split("&")
+let a = x.split(" & ")
 
 let b = a[0]
 let c = a[1]
@@ -42,7 +42,7 @@ let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qual
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
         
-       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else if(c === " 720p") {
 
@@ -57,7 +57,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
-        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else if(c === " 480p") {
 
@@ -72,14 +72,14 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
-        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else { 
 
     return reply("*Invalid quality input.*\n\n*Available quality inputs :* 1080p , 720p , 480p")
 
 }
-} else {
+} else if (d.endsWith('@g.us')) {
 
 if(c === " 1080p") {
 
@@ -94,7 +94,7 @@ let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qual
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
         
-       await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+       await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else if(c === " 720p") {
 
@@ -109,7 +109,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
-        await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage(d ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else if(c === " 480p") {
 
@@ -124,7 +124,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
-        await conn.sendMessage(d ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
+        await conn.sendMessage(d ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`});
 
 } else { 
 
