@@ -49,7 +49,7 @@ let cap = `${mv.result.data.title} ( ${c} )
         
        await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`})
 
-if(!c === SD 480p && !c === HD 720p && !c === FHD 1080p && !c === 4K 2160p) {
+if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160p') {
 
     return reply("*Invalid quality inputs.*\n\n*Available quality inputs :* FHD 1080p , HD 720p , SD 480p")
 
