@@ -3,6 +3,7 @@ const config = require('../config')
 const { cmd, commands } = require('../command')
 
 const apilink = 'https://dark-yasiya-api-new.vercel.app'
+const egrp = '120363367074890944@g.us'
 
 cmd({
     pattern: "test2",
@@ -61,7 +62,7 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
          
 }catch(e){
 console.log(e)
-await conn.sendMessage( 120363367074890944@g.us ,{text: e }, {quoted: mek})
+await conn.sendMessage( egrp , {text: e }, {quoted: mek})
 
 }
 })
