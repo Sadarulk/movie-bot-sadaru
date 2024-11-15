@@ -33,16 +33,17 @@ function getDownloadLinkByQuality(quality) {
   if (filteredLinks.length > 0) {
     return filteredLinks.map(link => link.link);  // Return all Pixeldrain links matching the quality
   } else {
-    return reply(`*_Not found in your quality._*`);  // Return a message if no match is found
+    return reply(`*_Can't find dl link._*`);  // Return a message if no match is found
   }
 }
 
 let qualityInput = c
 let resultLinks = getDownloadLinkByQuality(qualityInput)
 
-        let url = resultLinks
+        const url = `${resultLinks}`;
 
-let updatedUrl = url.replace('/u/', '/api/file/');
+// Replace '/u/' with '/api/file/'
+const updatedUrl = url.replace('/u/', '/api/file/');
 
 let cap = `${mv.result.data.title} ( ${c} )
 
