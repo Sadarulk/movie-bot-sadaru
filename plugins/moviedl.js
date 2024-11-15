@@ -35,7 +35,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].quality} )
 
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
         
        await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
@@ -50,7 +50,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
         let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[1].quality} )
 
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
         await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
@@ -65,7 +65,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
         let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[2].quality} )
 
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
 
         await conn.sendMessage( from ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
