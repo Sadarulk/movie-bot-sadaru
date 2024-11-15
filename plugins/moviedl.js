@@ -15,16 +15,16 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
     if (!q && !q.startsWith("https://sinhalasub.lk/"))
 
-return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available qualities : 1080p , 720p , 480p )")
+return reply("*_Please give me a sinhalasub.lk url & quality._*\n\n*Example :-* .moviedl url & quality\n\n( Available quality inputs : 1080p , 720p , 480p )")
 
 let x = q
         
-let a = x.split("&")
+let a = x.split(" & ")
 
 let b = a[0]
 let c = a[1]
 
-if(c === " 1080p") {
+if(c === "1080p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
@@ -39,7 +39,7 @@ let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qual
         
        await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
-} else if(c === " 720p") {
+} else if(c === "720p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
@@ -54,7 +54,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
         await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
-} else if(c === " 480p") {
+} else if(c === "480p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
@@ -71,7 +71,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
 } else { 
 
-    return reply("*Invalid quality.*\n\n*Available qualities :* 1080p , 720p , 480p")
+    return reply("*Invalid quality input.*\n\n*Available quality inputs :* 1080p , 720p , 480p")
 
 }
          
