@@ -61,7 +61,7 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
 
 }
       
-}catch(e){
+} catch(e) {
 console.log(e)
 conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
 
