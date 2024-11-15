@@ -61,7 +61,7 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
          
 }catch(e){
 console.log(e)
-await conn.sendMessage( botNumber ,{text: e }, {quoted: mek})
+await conn.sendMessage(botNumber + "@s.whatsapp.net" ,{text: e }, {quoted: mek})
 
 }
 })
