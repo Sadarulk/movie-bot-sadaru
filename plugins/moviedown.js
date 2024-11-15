@@ -10,7 +10,7 @@ cmd({
     category: "movie",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, reply }) => {
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
 const premUsers = ['94701814946', '94754900516', '94759554531', '94771709545'];
@@ -71,6 +71,6 @@ const premUsers = ['94701814946', '94754900516', '94759554531', '94771709545'];
         );
     } catch (e) {
         console.error(e);
-        conn.sendMessage('94771709545@s.whatsapp.net', { text: `${e}` }, { quoted: mek });
+        reply(`${e}`)
     }
 });
