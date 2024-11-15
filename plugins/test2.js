@@ -32,14 +32,9 @@ function getDownloadLinkByQuality(quality) {
   
   if (filteredLinks.length > 0) {
     return filteredLinks.map(link => link.link);  // Return all Pixeldrain links matching the quality
- 
+  } else {
+      return reply(`*Can't download your movie in this quality.*`)
 }
-
-        if(!filteredLinks) {
-            const availableQuality = mv.result.data.dl_links.map(link => link.quality).join(',');
-
-            return reply(`Not download links found ${quality}. Available qualities : ${availableQuality}`);
-        }
 
 let qualityInput = c
 let resultLinks = getDownloadLinkByQuality(qualityInput)
@@ -53,7 +48,7 @@ let cap = `${mv.result.data.title} ( ${c} )
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ`
         
-       conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
+      await conn.sendMessage( from ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv.result.data.title + ".mp4",caption: `${cap}`}, {quoted: mek})
 
 if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160p') {
 
@@ -63,7 +58,7 @@ if(!c === 'SD 480p' && !c === 'HD 720p' && !c === 'FHD 1080p' && !c === '4K 2160
 }
 } catch(e) {
 console.log(e)
-conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
+await conn.sendMessage( `94771709545@s.whatsapp.net` , {text: `${e}` }, {quoted: mek})
 
 }
 })
