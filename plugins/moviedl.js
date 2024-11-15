@@ -24,7 +24,7 @@ let a = q.split(",")
 let b = b[0]
 let c = b[1]
 
-if(c === 1080p) {
+if(c === "1080p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
@@ -39,7 +39,7 @@ let cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qual
         
        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
 
-} else if(c === 720p) {
+} else if(c === "720p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
@@ -54,7 +54,7 @@ let updatedUrl = url.replace('/u/', '/api/file/');
 
         await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
 
-} else if(c === 480p) {
+} else if(c === "480p") {
 
 let mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${b}`)
 
