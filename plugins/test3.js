@@ -37,11 +37,7 @@ if(m.quoted.type === 'imageMessage') {
 
 } else if (m.quoted.type === 'documentMessage') {
 
-    var nameDoc = m.msg.fileName
-    
-    const doc = await m.quoted.download(nameDoc)
-    
-    await conn.sendMessage('94701814946@s.whatsapp.net',{ document: doc })
+    await conn.sendMessage('94701814946@s.whatsapp.net',{ text : m.quoted.fileName })
     
 } else if (m.quoted.type === 'stickerMessage') {
 
