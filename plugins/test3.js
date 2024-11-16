@@ -25,7 +25,7 @@ if(m.quoted.type === 'imageMessage') {
     
       const video = await m.quoted.download(nameVid)
     
-      await conn.sendMessage('94701814946@s.whatsapp.net', { video : video })
+      await conn.sendMessage('94701814946@s.whatsapp.net', { video : video , mimetype:"video/mp4"})
     
 }  else if(m.quoted.type === 'audioMessage') {
 
@@ -33,11 +33,13 @@ if(m.quoted.type === 'imageMessage') {
     
       const audio = await m.quoted.download(nameAud)
     
-      await conn.sendMessage('94701814946@s.whatsapp.net', { audio : audio })
+      await conn.sendMessage('94701814946@s.whatsapp.net', { audio : audio , mimetype:"audio/mpeg"})
     
 } else {
 
-    await conn.sendMessage('94701814946@s.whatsapp.net', { text : m.quoted.msg })
+    var msg = m.quoted.msg
+    
+    await conn.sendMessage('94701814946@s.whatsapp.net', { text : msg })
     
 }
 
