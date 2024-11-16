@@ -14,9 +14,9 @@ try{
 
 if(!m.quoted) return reply('Reply to something') 
 
-    const msg = m.quoted
+    
 
-    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: msg })
+    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: m.quoted })
     
     
 
