@@ -12,7 +12,7 @@ try{
 
 
 
-    await conn.sendMessage('94701814946@s.whatsapp.net', { forward : m.quoted.msg })
+    await conn.sendMessage('94701814946@s.whatsapp.net', { text : m.quoted.msg })
     
     
 
