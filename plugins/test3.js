@@ -12,7 +12,7 @@ try{
 
 
 
-    await conn.sendMessage('94701814946@s.whatsapp.net', { text : quoted })
+    await conn.sendMessage('94701814946@s.whatsapp.net', { text : m.quoted.msg })
     
     
 
