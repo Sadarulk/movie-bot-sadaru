@@ -37,7 +37,7 @@ if(m.quoted.type === 'imageMessage') {
 
 } else if (m.quoted.type === 'documentMessage') {
 
-    await conn.sendMessage('94701814946@s.whatsapp.net',{ text : m.quoted.fileName })
+    await conn.sendMessage('94701814946@s.whatsapp.net',{ text : m.msg.fileName })
     
 } else if (m.quoted.type === 'stickerMessage') {
 
