@@ -12,8 +12,12 @@ try{
 
 
 if(m.quoted.type === 'imageMessage') {
+
+    var nameJpg = `testMsg`
     
-      await conn.sendMessage('94701814946@s.whatsapp.net', { image : m.quoted.msg })
+      const image = await m.quoted.download(nameJpg)
+    
+      await conn.sendMessage('94701814946@s.whatsapp.net', { image : image })
     
 }
     
