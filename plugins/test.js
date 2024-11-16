@@ -1,24 +1,18 @@
-const { fetchJson } = require('../lib/functions')
 const config = require('../config')
-const { cmd, commands } = require('../command')
-
+const {cmd , commands} = require('../command')
+const { fetchJson } = require('../lib/functions')
 
 cmd({
-    pattern: "test",
-    desc: "test",
-    category: "other",
-    filename: __filename
+    on: "body"
 },
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
 
-await conn.sendMessage(from, { text : "hello there this is test"})
+if(isCmd) return
 
-if(m.quoted.mek === 1){
+let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${body}`)
 
-reply(`test 1`)
-
-}
+return reply(`${data.data}\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`)
 
 }catch(e){
 console.log(e)
