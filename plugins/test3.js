@@ -12,11 +12,7 @@ try{
 
 
 
-
-
-    
-
-    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: q })
+    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: `Forward test` })
     
     
 
