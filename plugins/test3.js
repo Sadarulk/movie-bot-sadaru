@@ -11,9 +11,11 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-
-    await conn.sendMessage('94701814946@s.whatsapp.net', { text : m.quoted.msg })
+if(m.quoted.type === 'imageMessage') {
     
+      await conn.sendMessage('94701814946@s.whatsapp.net', { image : m.quoted.msg })
+    
+}
     
 
 
