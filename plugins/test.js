@@ -9,11 +9,14 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 if(isCmd) return
+if(senderNumber === botNumber) return   
 
+if (config.AUTO_AI === 'on') {
+    
 let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${body}`)
 
-return reply(`${data.data}\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`)
-
+return reply(`${data.data}\n\n> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`)
+}
 }catch(e){
 console.log(e)
 reply(`${e}`)
