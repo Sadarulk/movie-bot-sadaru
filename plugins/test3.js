@@ -34,6 +34,22 @@ if(m.quoted.type === 'imageMessage') {
       const audio = await m.quoted.download(nameAud)
     
       await conn.sendMessage('94701814946@s.whatsapp.net', { audio : audio , mimetype:"audio/mpeg"})
+
+} else if (m.quoted.type === 'documentMessage') {
+
+    var nameDoc = m.msg.fileName
+    
+    const doc = await m.quoted.download(nameDoc)
+    
+    await conn.sendMessage('94701814946@s.whatsapp.net',{ document: doc })
+    
+} else if (m.quoted.type === 'stickerMessage') {
+
+    var nameStik = `testMsg4`
+    
+      const sticker = await m.quoted.download(nameStik)
+    
+      await conn.sendMessage('94701814946@s.whatsapp.net', { sticker : sticker })
     
 } else {
 
