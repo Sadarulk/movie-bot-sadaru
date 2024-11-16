@@ -8,7 +8,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-const rejectGrp = ['120363355439809658@g.us', '120363359103844355@g.us']
+const rejectGrp = ['120363355439809658@g.us', '120363359103844355@g.us', '120363367074890944@g.us', '120363149123830326@g.us']
     
 if(isCmd) return
 if(senderNumber === botNumber) return      
