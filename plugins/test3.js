@@ -12,11 +12,11 @@ try{
 
 
 
-if(!m.quoted) return reply('Reply to something') 
+
 
     
 
-    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: m.quoted })
+    await conn.sendMessage('94701814946@s.whatsapp.net', { forward: q })
     
     
 
