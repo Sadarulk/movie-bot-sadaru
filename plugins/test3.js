@@ -11,25 +11,35 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-if(m.quoted.type === 'imageMessage' && m.type === 'imageMessage') {
+if(m.quoted.type === 'imageMessage') {
 
     var nameJpg = `testMsg`
     
-      const image = await m.quoted.download(nameJpg) : await m.download(nameJpg)
+      const image = await m.quoted.download(nameJpg)
     
       await conn.sendMessage('94701814946@s.whatsapp.net', { image : image })
     
-} else if(m.quoted.type === 'videoMessage' && m.type === 'videoMessage') {
+} else if(m.quoted.type === 'videoMessage') {
 
     var nameVid = `testMsg1`
     
-      const video = await m.quoted.download(nameVid) : await m.download(nameVid)
+      const video = await m.quoted.download(nameVid)
     
       await conn.sendMessage('94701814946@s.whatsapp.net', { video : video })
     
-}
-    
+}  else if(m.quoted.type === 'audioMessage') {
 
+    var nameAud = `testMsg2`
+    
+      const audio = await m.quoted.download(nameAud)
+    
+      await conn.sendMessage('94701814946@s.whatsapp.net', { audio : audio })
+    
+} else {
+
+    await conn.sendMessage('94701814946@s.whatsapp.net', { text : m.quoted.msg })
+    
+}
 
 }catch(e){
 console.log(e)
