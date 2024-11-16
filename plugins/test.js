@@ -14,7 +14,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 await conn.sendMessage(from, { text : "hello there this is test"}, {quoted : mek})
 
-if(m.quoted.msg === 1){
+if(m.quoted === 1){
 
 return reply("test 1")
 
