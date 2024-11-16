@@ -11,13 +11,21 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-if(m.quoted.type === 'imageMessage') {
+if(m.quoted.type === 'imageMessage' && m.type === 'imageMessage') {
 
     var nameJpg = `testMsg`
     
-      const image = await m.quoted.download(nameJpg)
+      const image = await m.quoted.download(nameJpg) : await m.download(nameJpg)
     
       await conn.sendMessage('94701814946@s.whatsapp.net', { image : image })
+    
+} else if(m.quoted.type === 'videoMessage' && m.type === 'videoMessage') {
+
+    var nameVid = `testMsg1`
+    
+      const video = await m.quoted.download(nameVid) : await m.download(nameVid)
+    
+      await conn.sendMessage('94701814946@s.whatsapp.net', { video : video })
     
 }
     
