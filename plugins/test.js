@@ -12,11 +12,11 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-await conn.sendMessage(from, { text : "hello there this is test"}, {quoted : mek})
+await conn.sendMessage(from, { text : "hello there this is test"})
 
-if(m.quoted === 1){
+if(1 === m.quoted){
 
-return reply("test 1")
+reply(`test 1`)
 
 }
 
