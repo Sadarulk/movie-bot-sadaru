@@ -11,6 +11,9 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
+const blockGrp = config.BLOCK_JID
+if(blockGrp.includes(from)) return
+    
     if(!q) return reply(`*_please give me a jid to forward this_*`)
     
 if(m.quoted.type === 'imageMessage') {
