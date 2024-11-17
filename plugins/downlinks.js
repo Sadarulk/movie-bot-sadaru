@@ -14,7 +14,10 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-  
+
+const blockGrp = config.BLOCK_JID
+if(blockGrp.includes(from)) return
+        
     if (!q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
 
 const mv = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
