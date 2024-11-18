@@ -132,12 +132,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
         if(!isOwner) return reply(`*_This is an owner cmd._*`)
         if(!isGroup) return
-       // id & people to add to the group (will throw error if it fails)
-const response = await conn.groupParticipantsUpdate(
-    from, 
-    q + "@s.whatsapp.net",
-    "add" // replace this parameter with "remove", "demote" or "promote"
-)
+  
+await conn.groupParticipantsUpdate(from, q + "@s.whatsapp.net", "add" )
   
 }catch(e){
 console.log(e)
@@ -159,19 +155,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if(!isGroup) return
 
         let member = m.quoted.sender
-       // id & people to add to the group (will throw error if it fails)
-const response = await conn.groupParticipantsUpdate(
-    from, 
-    member,
-    "remove" // replace this parameter with "remove", "demote" or "promote"
-)
+      
+await conn.groupParticipantsUpdate(from, member, "remove" )
+        
         if(q > 0){
 
-const response = await conn.groupParticipantsUpdate(
-    from, 
-    q + "@s.whatsapp.net",
-    "remove" // replace this parameter with "remove", "demote" or "promote"
-)
+await conn.groupParticipantsUpdate(from, q + "@s.whatsapp.net", "remove" )
             
         }
 reply(`*_Successfully removed ✅_*`)
