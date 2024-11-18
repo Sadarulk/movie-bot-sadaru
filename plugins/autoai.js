@@ -9,6 +9,10 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 const workGrp = config.AUTO_AI_JID
+
+    const test = ['.', ',', '/', '?', '-', '_', '!', '_']
+
+         if(!body.startsWith(test)) return
     
 if(isCmd) return
 if(senderNumber === botNumber) return      
