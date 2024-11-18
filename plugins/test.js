@@ -9,7 +9,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 const test = ['mathee', 'hirushi', 'parami']
 
-         if(!body.includes(test)) return
+         if(!test.includes(body)) return
          
         // Send the first message and store the response
         const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක් 😌' }, {quoted : mek});
