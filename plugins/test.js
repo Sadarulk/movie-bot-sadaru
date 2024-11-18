@@ -13,7 +13,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
         if(!isOwner) return
 
-if(!q.includes(chat.whatsapp.com)) return reply("*_Invalid group link._*")
+if(!q.includes('chat.whatsapp.com')) return reply("*_Invalid group link._*")
         
         const result = q.split('https://chat.whatsapp.com/')[1]
         
