@@ -3,7 +3,7 @@ const config = require('../config')
 
 
 cmd({
-    pattern: "test",
+    pattern: "id",
     desc: "test",
     category: "owner",
     filename: __filename
@@ -13,9 +13,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
         if(!isOwner) return
 
-const msg = getMessageFromStore(from, m.quoted.id) // implement this on your end
-await conn.sendMessage('94701814946@s.whatsapp.net', { forward: msg }) // WA forward the message!
-      
+await conn.sendMessage(from, { text : m.quoted.id })
+        
 }catch(e){
 console.log(e)
 reply(`${e}`)
