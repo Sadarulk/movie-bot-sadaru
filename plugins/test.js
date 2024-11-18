@@ -20,8 +20,6 @@ if(!q.startsWith('https://chat.whatsapp.com/')) return reply(`*_Invalid group li
  const response = await conn.groupAcceptInvite(result)
         
  const test = await conn.groupGetInviteInfo(result)
-        
-console.log("group information: " + test)
       
 reply(`*_Successfully joined ✅_*`)
       
@@ -66,6 +64,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
           
         await conn.groupSettingUpdate(from, 'not_announcement')
 
+reply(`*_Group open by ${sender}_*`)
   
 }catch(e){
 console.log(e)
@@ -87,6 +86,27 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
           
         await conn.groupSettingUpdate(from, 'announcement')
 
+        reply(`*_Group close by ${sender}_*`)
+  
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "link",
+    desc: "close groups",
+    category: "owner",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+       
+        const code = await conn.groupInviteCode(from)
+                                                
+        reply("https://chat.whatsapp.com/" + code)
   
 }catch(e){
 console.log(e)
