@@ -12,17 +12,19 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 if(!isOwner) return
 
-setTimeout(() => {
-    
-  let response = conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
-    
-}, 5000);
 
-        await conn.sendMessage(from, {
+    
+  const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
+    
+setTimeout(() => {
+            
+        conn.sendMessage(from, {
       text: 'හැබැයි බඩුවක්',
       edit: response.key,
-    });
-        
+    })
+            
+}, 5000);
+            
 }catch(e){
 console.log(e)
 reply(`${e}`)
