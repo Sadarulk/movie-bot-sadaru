@@ -20,18 +20,8 @@ let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=
     
     return reply(`${data.result}`)
 
-if(m.type === 'imageMessage') {
+} else if (config.AUTO_AI === 'off') return
 
-    var nameJpg = `testMsg`
-    
-    const image = await m.download(nameJpg)
-    
-let msg = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${image}`)
-
-    return reply(`${msg.result}`) 
-
-    }
-}
     
 }catch(e){
 console.log(e)
