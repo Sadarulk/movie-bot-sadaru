@@ -7,7 +7,7 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-const test = ['mathee', 'hirushi', 'parami']
+const test = ['mathee', 'hirushi', 'parami', 'Mathee', 'Hirushi', 'Parami']
 
          if(!test.includes(body)) return
          
