@@ -7,7 +7,7 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-        if(body === 'mathee' && body === 'parami') {
+        if(!body === 'mathee') return
         // Send the first message and store the response
         const response = await conn.sendMessage(from, { text: 'සු' }, {quoted : mek});
         await conn.sendMessage(from, {
@@ -54,7 +54,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             edit: response.key,
         }, {quoted : mek});
             
-        }
+        
         
     } catch (e) {
         console.log(e);
