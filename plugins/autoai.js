@@ -20,7 +20,7 @@ let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=
     
     return reply(`${data.result}`)
 
-} else if (config.AUTO_AI === 'off') return
+}
 
     
 }catch(e){
