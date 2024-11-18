@@ -50,11 +50,70 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 const test = ['sile', 'Sile', 'silarathana', 'Silarathana']
 
          if(!test.includes(body)) return
-         
       
-     const response = await conn.sendMessage(from, { text: 'සීලේ අපිට' }, {quoted : mek});
+     const response = await conn.sendMessage(from, { text: 'සී' }, {quoted : mek});
 
          await conn.sendMessage(from, {
+            text: 'සීලේ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපි',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට,',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සී',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සීලෙ',
+            edit: response.key,
+        });
+         await delay(1000);
+       await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි සීලෙට',
             edit: response.key,
         });
