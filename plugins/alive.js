@@ -14,7 +14,7 @@ try{
 const blockGrp = config.BLOCK_JID
 if(blockGrp.includes(from)) return
     
-let aliveMsg = getLinkPreview("*_Hello ${pushname} 👋_*
+let aliveMsg = getLinkPreview("*_Hello there 👋_*
 
 *_INFINITY MOVIE Bot is alive..._*
 
