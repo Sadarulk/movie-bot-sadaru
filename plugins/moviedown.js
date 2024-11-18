@@ -16,7 +16,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         const blockGrp = config.BLOCK_JID
 if(blockGrp.includes(from)) return
 
-const premUsers = ['94701814946'];
+const premUsers = ['94701814946', '94771709545'];
         
         // Check if the user is premium
         if (!premUsers.includes(senderNumber)) {
