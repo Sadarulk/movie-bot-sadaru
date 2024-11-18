@@ -9,8 +9,6 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        // Check if the user is the owner
-        if (!isOwner) return;
 
         // Send the first message and store the response
         const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' });
@@ -22,10 +20,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await delay(5000);
 
         // Send the second message, which edits the previous one
-        await conn.sendMessage(from, {
+        const next = await conn.sendMessage(from, {
             text: 'හැබැයි බඩුවක්',
             edit: response.key,
         });
+
+        await delay(5000);
+
+        await conn.sendMessage(from, { delete: next.key })
 
     } catch (e) {
         console.log(e);
