@@ -1,5 +1,6 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
+const {getLinkPreview , getPreviewFromContent} = require('link-preview-js')
 
 cmd({
     pattern: "alive",
@@ -13,7 +14,7 @@ try{
 const blockGrp = config.BLOCK_JID
 if(blockGrp.includes(from)) return
     
-let aliveMsg = `*_Hello ${pushname} 👋_*
+let aliveMsg = getLinkPreview("*_Hello ${pushname} 👋_*
 
 *_INFINITY MOVIE Bot is alive..._*
 
@@ -23,9 +24,10 @@ let aliveMsg = `*_Hello ${pushname} 👋_*
 
 📌 *Main Movie Group:* https://chat.whatsapp.com/GMaH3KTEtlEJclmaZmvnIa
 
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ")
 
 return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: aliveMsg},{quoted: mek})
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
