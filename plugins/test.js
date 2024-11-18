@@ -11,9 +11,30 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
 
 if(!isOwner) return
+
+const response = await sock.sendMessage(from, { text: 'hello!' })
         
-await conn.sendMessage(from, { delete: m.quoted })
-        
+await sock.sendMessage(from, {
+      text: '▄',
+      edit: response.key,
+    });
+await sock.sendMessage(from, {
+      text: '▄▅',
+      edit: response.key,
+    });        
+await sock.sendMessage(from, {
+      text: '▄▅▆',
+      edit: response.key,
+    });        
+await sock.sendMessage(from, {
+      text: '▄▅▆▇',
+      edit: response.key,
+    });        
+await sock.sendMessage(from, {
+      text: '▄▅▆▇█',
+      edit: response.key,
+    });        
+
 }catch(e){
 console.log(e)
 reply(`${e}`)
