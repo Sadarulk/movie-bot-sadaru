@@ -88,7 +88,7 @@ await conn.sendMessage(
                 caption: caption
             }
         );
-
+}
 }
     } catch (e) {
         console.error(e);
