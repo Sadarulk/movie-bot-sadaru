@@ -38,7 +38,7 @@ const test = ['mathee', 'hirushi', 'parami', 'Mathee', 'Hirushi', 'Parami']
 
 > Indika Thotawaththata Pin Pinisa`
 
-         await conn.semdMessage(from, {text : msg})
+         await conn.sendMessage(from, {text : msg} )
         
     } catch (e) {
         console.log(e);
