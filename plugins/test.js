@@ -12,13 +12,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 if(!isOwner) return
 
-
-    
-  const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
+const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
     
 setTimeout(() => {
             
-        conn.sendMessage(from, {
+    let test = conn.sendMessage(from, {
       text: 'හැබැයි බඩුවක්',
       edit: response.key,
     })
