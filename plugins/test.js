@@ -1,18 +1,8 @@
 const { cmd, commands } = require('../command')
 const config = require('../config')
-const {
-default: makeWASocket,
-useMultiFileAuthState,
-DisconnectReason,
-jidNormalizedUser,
-getContentType,
-fetchLatestBaileysVersion,
-Browsers
-} = require('@whiskeysockets/baileys')
-
 
 cmd({
-    pattern: "id",
+    pattern: "test",
     desc: "test",
     category: "owner",
     filename: __filename
@@ -20,7 +10,7 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-        reply(`Eka parak kiwahama ahapm pko.ubta oka hdnna be 🖕`)
+       await conn.sendMessage(from, {text : `Hello test`}, contextInfo: { forwardingScore: 999, isForwarded: true })
         
 }catch(e){
 console.log(e)
