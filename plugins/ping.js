@@ -22,7 +22,7 @@ if(blockGrp.includes(from)) return
         const endTime = Date.now()
         const ping = endTime - startTime
 
-        await conn.sendMessage(from, { text: "*Infinity's ping :* _${ping} ms_", edit: response.key, })
+        await conn.sendMessage(from, { text: `*Infinity's ping :* ${ping} ms`, edit: response.key, })
 
     } catch (e) {
         console.log(e)
