@@ -21,8 +21,12 @@ if(blockGrp.includes(from)) return
   
         const endTime = Date.now()
         const ping = endTime - startTime
+    
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-        await conn.sendMessage(from, { text: `*Infinity's ping :* ${ping} ms`, edit: response.key, })
+        await delay(1000)
+    
+        await conn.sendMessage(from, { text: `*Infinity's ping :* _${ping} ms_`, edit: response.key, })
 
     } catch (e) {
         console.log(e)
