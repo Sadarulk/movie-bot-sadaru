@@ -18,13 +18,21 @@ if (config.AUTO_AI === 'on') {
     
 let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${body}`)
 
-return reply(`${data.result}`);
-
-    let msg = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${quoted}`)
-
-return reply(`${msg.result}`);
-
+return reply(`${data.result}`)
+    
 }   
+
+    if(m.quoted.type === 'imageMessage') {
+
+    var nameJpg = `testMsg`
+    
+      const image = await m.quoted.download(nameJpg)
+    
+     let msg = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${image}`)
+
+return reply(`${msg.result}`) 
+
+    }
     
 }catch(e){
 console.log(e)
