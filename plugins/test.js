@@ -12,29 +12,51 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 if(!isOwner) return
 
-const response = await conn.sendMessage(from, { text: 'hello!' })
+let response = await conn.sendMessage(from, { text: 'hello!' })
         
-await conn.sendMessage(from, {
+let a = await conn.sendMessage(from, {
       text: '▄',
       edit: response.key,
     });
-await conn.sendMessage(from, {
+let b = await conn.sendMessage(from, {
       text: '▄▅',
-      edit: response.key,
+      edit: a.key,
     });        
-await conn.sendMessage(from, {
+let c = await conn.sendMessage(from, {
       text: '▄▅▆',
-      edit: response.key,
+      edit: b.key,
     });        
-await conn.sendMessage(from, {
+let d = await conn.sendMessage(from, {
       text: '▄▅▆▇',
-      edit: response.key,
+      edit: c.key,
     });        
-await conn.sendMessage(from, {
+let f = await conn.sendMessage(from, {
       text: '▄▅▆▇█',
-      edit: response.key,
+      edit: d.key,
     });        
+let g = await conn.sendMessage(from, {
+      text: '▄▅▆▇██',
+      edit: f.key,
+    });
+let h = await conn.sendMessage(from, {
+      text: '▄▅▆▇██▇',
+      edit: g.key,
+    });        
+let i = await conn.sendMessage(from, {
+      text: '▄▅▆▇██▇▆',
+      edit: h.key,
+    });        
+let j = await conn.sendMessage(from, {
+      text: '▄▅▆▇██▇▆▅',
+      edit: i.key,
+    });        
+let k = await conn.sendMessage(from, {
+      text: '▄▅▆▇██▇▆▅▄',
+      edit: j.key,
+    });
 
+
+        
 }catch(e){
 console.log(e)
 reply(`${e}`)
