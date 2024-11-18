@@ -1,5 +1,6 @@
 const { cmd, commands } = require('../command')
 const config = require('../config')
+const fs = require('fs')
 
 
 cmd({
@@ -16,7 +17,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const ppUrl = await conn.profilePictureUrl(from)
       
-await conn.sendMessage(from, {image: {url: ppUrl } },{ quoted: mek })
+await conn.sendMessage(from, {image: ppUrl },{ quoted: mek })
       
 }catch(e){
 console.log(e)
