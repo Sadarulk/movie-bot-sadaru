@@ -16,9 +16,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const ppUrl = await conn.profilePictureUrl(from)
       
-console.log("download profile picture from: " + ppUrl)
-
-
+await conn.sendMessage(from, {image: {url: ppUrl } },{ quoted: mek })
       
 }catch(e){
 console.log(e)
