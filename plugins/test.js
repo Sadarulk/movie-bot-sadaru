@@ -1,5 +1,5 @@
-const { cmd, commands } = require('../command')
-const config = require('../config')
+const { cmd, commands } = require('../command');
+const config = require('../config');
 
 cmd({
     pattern: "mathee",
@@ -7,25 +7,29 @@ cmd({
     category: "owner",
     filename: __filename
 },
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
+        // Check if the user is the owner
+        if (!isOwner) return;
 
-if(!isOwner) return
+        // Send the first message and store the response
+        const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' });
 
-const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
-    
-setTimeout(() => {
-            
-    let test = conn.sendMessage(from, {
-      text: 'හැබැයි බඩුවක්',
-      edit: response.key,
-    })
-            
-}, 5000);
-            
-}catch(e){
-console.log(e)
-reply(`${e}`)
+        // Function to create a delay
+        const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-}
-})
+        // Wait for 5 seconds (5000 ms)
+        await delay(5000);
+
+        // Send the second message, which edits the previous one
+        await conn.sendMessage(from, {
+            text: 'හැබැයි බඩුවක්',
+            edit: response.key,
+        });
+
+    } catch (e) {
+        console.log(e);
+        reply(`${e}`);
+    }
+});
+
