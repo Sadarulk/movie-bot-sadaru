@@ -19,7 +19,6 @@ if(!q.startsWith('https://chat.whatsapp.com/')) return reply(`*_Invalid group li
         
  const response = await conn.groupAcceptInvite(result)
         
- const test = await conn.groupGetInviteInfo(result)
       
 reply(`*_Successfully joined ✅_*`)
       
@@ -60,11 +59,13 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
+if(!isGroup) return
+        
         if(!groupAdmins) return reply(`*_You are not admin._*`)
           
         await conn.groupSettingUpdate(from, 'not_announcement')
 
-reply(`*_Group open by ${sender}_*`)
+reply(`*_Group opened_*`)
   
 }catch(e){
 console.log(e)
@@ -82,11 +83,13 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
+if(!isGroup) return
+        
         if(!groupAdmins) return reply(`*_You are not admin._*`)
           
         await conn.groupSettingUpdate(from, 'announcement')
 
-        reply(`*_Group close by ${sender}_*`)
+        reply(`*_Group closed._*`)
   
 }catch(e){
 console.log(e)
@@ -103,11 +106,76 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-       
+
+        if(!isGroup) return
+        
         const code = await conn.groupInviteCode(from)
-                                                
+                                        
         reply("https://chat.whatsapp.com/" + code)
   
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+
+cmd({
+    pattern: "add",
+    desc: "add member",
+    category: "owner",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+
+        if(!isOwner) return reply(`*_This is an owner cmd._*`)
+        if(!isGroup) return
+       // id & people to add to the group (will throw error if it fails)
+const response = await conn.groupParticipantsUpdate(
+    from, 
+    q + "@s.whatsapp.net",
+    "add" // replace this parameter with "remove", "demote" or "promote"
+)
+  
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "kick",
+    desc: "remove member",
+    category: "owner",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+
+        if(!isOwner) return reply(`*_This is an owner cmd._*`)
+        if(!isGroup) return
+
+        let member = m.quoted.sender
+       // id & people to add to the group (will throw error if it fails)
+const response = await conn.groupParticipantsUpdate(
+    from, 
+    member,
+    "remove" // replace this parameter with "remove", "demote" or "promote"
+)
+        if(q > 0){
+
+const response = await conn.groupParticipantsUpdate(
+    from, 
+    q + "@s.whatsapp.net",
+    "remove" // replace this parameter with "remove", "demote" or "promote"
+)
+            
+        }
+reply(`*_Successfully removed ✅_*`)
+        
 }catch(e){
 console.log(e)
 reply(`${e}`)
