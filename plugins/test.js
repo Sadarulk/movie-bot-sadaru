@@ -20,10 +20,7 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-        if(!isOwner) return
-
-const msg = getMessageFromStore('120363318515104141@g.us', '3EB0DDA73A39D1325BCEE1') // implement this on your end
-await conn.sendMessage('94701814946@s.whatsapp.net', { forward: msg }) // WA forward the message!
+        reply(`Eka parak kiwahama ahapm pko.ubta oka hdnna be 🖕`)
         
 }catch(e){
 console.log(e)
