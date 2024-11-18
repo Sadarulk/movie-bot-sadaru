@@ -51,80 +51,205 @@ const test = ['sile', 'Sile', 'silarathana', 'Silarathana']
 
          if(!test.includes(body)) return
 
-         const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+         
       
      const response = await conn.sendMessage(from, { text: 'සී' }, {quoted : mek});
 
-         await delay(1000);
+         
 
          await conn.sendMessage(from, {
             text: 'සීලේ',
             edit: response.key,
         });
-         await delay(1000);
+
        await conn.sendMessage(from, {
             text: 'සීලේ ',
             edit: response.key,
         });
-         await delay(1000);
+        
        await conn.sendMessage(from, {
             text: 'සීලේ අ',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපි',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට,',
             edit: response.key,
         });
-         await delay(1000);
+        
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, ',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අ',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි ',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි සී',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි සීලෙ',
             edit: response.key,
         });
-         await delay(1000);
+         
        await conn.sendMessage(from, {
             text: 'සීලේ අපිට, අපි සීලෙට',
             edit: response.key,
         });
-       
-            
+       await conn.sendMessage(from, {
+            text: 'සීලේ',
+            edit: response.key,
+        });
+
+       await conn.sendMessage(from, {
+            text: 'සීලේ ',
+            edit: response.key,
+        });
         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපි',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට,',
+            edit: response.key,
+        });
         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සී',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සීලෙ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සීලෙට',
+            edit: response.key,
+        });
+            await conn.sendMessage(from, {
+            text: 'සීලේ',
+            edit: response.key,
+        });
+
+       await conn.sendMessage(from, {
+            text: 'සීලේ ',
+            edit: response.key,
+        });
+        
+       await conn.sendMessage(from, {
+            text: 'සීලේ අ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපි',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට,',
+            edit: response.key,
+        });
+        
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සී',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සීලෙ',
+            edit: response.key,
+        });
+         
+       await conn.sendMessage(from, {
+            text: 'සීලේ අපිට, අපි සීලෙට',
+            edit: response.key,
+        });
+         
     } catch (e) {
         console.log(e);
         reply(`${e}`);
