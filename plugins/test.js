@@ -1,10 +1,9 @@
 const { cmd, commands } = require('../command')
 const config = require('../config')
-const fs = require('fs')
 
 
 cmd({
-    pattern: "getpp",
+    pattern: "test",
     desc: "test",
     category: "owner",
     filename: __filename
@@ -14,10 +13,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
         if(!isOwner) return
 
-
-const ppUrl = await conn.profilePictureUrl(from)
-      
-await conn.sendMessage(from, {image: ppUrl },{ quoted: mek })
+const msg = getMessageFromStore(from, m.quoted.id) // implement this on your end
+await conn.sendMessage('94701814946@s.whatsapp.net', { forward: msg }) // WA forward the message!
       
 }catch(e){
 console.log(e)
