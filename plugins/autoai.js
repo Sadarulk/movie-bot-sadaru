@@ -9,10 +9,6 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 const workGrp = config.AUTO_AI_JID
-
-    const test = ['.', ',', '/', '?', '-', '_', '!', '_']
-
-         if(!body.startsWith(test)) return
     
 if(isCmd) return
 if(senderNumber === botNumber) return      
@@ -24,7 +20,7 @@ let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=
     
     return reply(`${data.result}`)
 
-}
+} 
 
     
 }catch(e){
