@@ -22,11 +22,11 @@ return reply(`${data.result}`)
     
 }   
 
-    if(m.quoted.type === 'imageMessage') {
+    if(m.type === 'imageMessage') {
 
     var nameJpg = `testMsg`
     
-      const image = await m.quoted.download(nameJpg)
+      const image = await m.download(nameJpg)
     
      let msg = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${image}`)
 
