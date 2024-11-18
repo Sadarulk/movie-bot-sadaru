@@ -50,8 +50,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 const test = ['sile', 'Sile', 'silarathana', 'Silarathana']
 
          if(!test.includes(body)) return
+
+         const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
       
      const response = await conn.sendMessage(from, { text: 'සී' }, {quoted : mek});
+
+         await delay(1000);
 
          await conn.sendMessage(from, {
             text: 'සීලේ',
