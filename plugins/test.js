@@ -11,7 +11,31 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
 
         // Send the first message and store the response
-        const response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' });
+        const response = await conn.sendMessage(from, { text: 'සු' });
+        await conn.sendMessage(from, {
+            text: 'සුර',
+            edit: response.key,
+        });
+        await conn.sendMessage(from, {
+            text: 'සුරං',
+            edit: response.key,
+        });
+        await conn.sendMessage(from, {
+            text: 'සුරංග',
+            edit: response.key,
+        });
+        await conn.sendMessage(from, {
+            text: 'සුරංගනා',
+            edit: response.key,
+        });
+        await conn.sendMessage(from, {
+            text: 'සුරංගනාවිය',
+            edit: response.key,
+        });
+        await conn.sendMessage(from, {
+            text: 'සුරංගනාවියක්',
+            edit: response.key,
+        });
 
         // Function to create a delay
         const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -25,7 +49,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             edit: response.key,
         });
 
-        await delay(5000);
+        await delay(2000);
 
         await conn.sendMessage(from, { delete: next.key })
 
