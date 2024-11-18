@@ -14,17 +14,7 @@ try{
 const blockGrp = config.BLOCK_JID
 if(blockGrp.includes(from)) return
     
-let aliveMsg = getLinkPreview("*_Hello there 👋_*
-
-*_INFINITY MOVIE Bot is alive..._*
-
-🧑‍💻 *Owner:* Sadaru
-
-📞 *Owner Number:* +94 70 181 4946
-
-📌 *Main Movie Group:* https://chat.whatsapp.com/GMaH3KTEtlEJclmaZmvnIa
-
-> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ")
+let aliveMsg = getLinkPreview(" Hi there this is test https://chat.whatsapp.com/IBFf5kRHL6j9Wcw1sTnwms")
 
 return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: aliveMsg},{quoted: mek})
     
