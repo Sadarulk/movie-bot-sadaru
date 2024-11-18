@@ -42,15 +42,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await delay(5000);
 
         // Send the second message, which edits the previous one
-        const next = await conn.sendMessage(from, {
+        await conn.sendMessage(from, {
             text: 'හැබැයි බඩුවක් 😂',
             edit: response.key,
         }, {quoted : mek});
         
         await delay(2000);
 
-            const next = await conn.sendMessage(from, {
-            text: 'සුරංගනාවියක් 😂',
+            await conn.sendMessage(from, {
+            text: 'සුරංගනාවියක් 😌',
             edit: response.key,
         }, {quoted : mek});
             
