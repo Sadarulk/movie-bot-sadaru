@@ -65,7 +65,7 @@ const test = ['කෑවද බන්', 'කෑවද බන් ?', 'කෑව�
             edit: response.key,
         });
 
-     await delay(3000);
+     await delay(2000);
 
         // Send the second message, which edits the previous one
         await conn.sendMessage(from, {
