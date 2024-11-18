@@ -14,7 +14,7 @@ if(!isOwner) return
 
 setTimeout(() => {
     
-  let response = await conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
+  let response = conn.sendMessage(from, { text: 'සුරංගනාවියක්' })
     
 }, 5000);
 
