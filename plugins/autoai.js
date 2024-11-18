@@ -18,9 +18,13 @@ if (config.AUTO_AI === 'on') {
     
 let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${body}`)
 
-return reply(`${data.result}`)
-    
-}
+return reply(`${data.result}`);
+
+    let msg = await fetchJson(`https://dark-yasiya-api-new.vercel.app/ai/chatgpt?q=${quoted}`)
+
+return reply(`${msg.result}`);
+
+}   
     
 }catch(e){
 console.log(e)
