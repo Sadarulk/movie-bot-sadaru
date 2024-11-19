@@ -10,7 +10,10 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-
+        
+const blockGrp = config.BLOCK_JID
+if(blockGrp.includes(from)) return
+        
         if(!isOwner) return reply(`*_This is an owner cmd._*`)
 
 if(!q.startsWith('https://chat.whatsapp.com/')) return reply(`*_Invalid group link._*`)
@@ -38,8 +41,8 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-
-        if(!isOwner) return reply(`*_This is an owner cmd._*`)
+        
+        if(!isOwner) return
           
         await conn.groupLeave(from)
   
@@ -60,6 +63,9 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
+const blockGrp = config.BLOCK_JID
+if(blockGrp.includes(from)) return
+        
         if(!isGroup) return
         
         const code = await conn.groupInviteCode(from)
