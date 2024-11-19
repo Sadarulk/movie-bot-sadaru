@@ -1,5 +1,5 @@
 <a href = "#">
-<img src = "https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/infinitybotlogo.png?raw=true">
+<img src = "https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/infinitybotlogo.png?raw=true" >
 </img>
 
 <p align="center">
