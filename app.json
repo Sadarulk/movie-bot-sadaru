@@ -1,6 +1,6 @@
 {
   "name": "INFINITY-MOVIE-BOT",
-  "description": "Simple WhatsApp bot made by Sadaru",
+  "description": "INFINITY MOVIE BOT is movie download wa bot created by Sadaru",
   "logo": "https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/infinitybotlogo.png?raw=true",
   "keywords": ["bot"],
   "success_url": "/",
@@ -11,8 +11,8 @@
       "required": true
     },  
 
-    "ALIVE_IMG": {
-      "description": "Put your alive img here.",
+    "MODE": {
+      "description": "Put your mode here.",
       "required": true
     },
     
