@@ -26,7 +26,9 @@ let aliveMsg = `*_Hello ${pushname} 👋_*
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱᴀᴅᴀʀᴜ`
 
-return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: aliveMsg},{quoted: mek})
+let aliveImg = `https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/infinitybotlogo.png?raw=true`
+
+return await conn.sendMessage(from,{image: {url: aliveImg },caption: aliveMsg },{quoted: mek})
     
 }catch(e){
 console.log(e)
