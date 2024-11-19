@@ -11,13 +11,28 @@
       "required": true
     },  
 
-    "MODE": {
-      "description": "Put your mode here.",
+    "MV_SEND_JID": {
+      "description": "Put movie send jid.",
       "required": true
     },
     
-    "MV_SEND_JID": {
-      "description": "Put movie send jid.",
+    "MODE": {
+      "description": "Put your mode.",
+      "required": true
+    },
+    
+    "AUTO_AI": {
+      "description": "Put on or off.",
+      "required": true
+    },
+    
+    "AUTO_AI_JID": {
+      "description": "Put the auto ai send jid.",
+      "required": true
+    },
+    
+    "BLOCK_JID": {
+      "description": "Put the block jid.",
       "required": false
     }   
 },
