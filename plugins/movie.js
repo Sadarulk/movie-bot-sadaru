@@ -213,7 +213,7 @@ let msg2 = `🍟 *${mv_info2.result.title}*
 await conn.sendMessage(id ,{image:{url: mv_info2.result.images[0]},caption:msg2})
 
 }
-} else if (c.endsWith('@g.us')) {
+} else if (c.endsWith('@g.us') && c.endsWith('@s.whatsapp.net')) {
 
 if (!q && !q.startsWith("https://sinhalasub.lk/")) {
 
