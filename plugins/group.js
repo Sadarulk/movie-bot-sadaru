@@ -5,13 +5,13 @@ const config = require('../config')
 cmd({
     pattern: "join",
     desc: "join groups",
-    category: "other",
+    category: "owner",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
-        if(!isOwner) return
+        if(!isOwner) return reply(`*_This is an owner cmd._*`)
 
 if(!q.startsWith('https://chat.whatsapp.com/')) return reply(`*_Invalid group link._*`)
         
@@ -50,58 +50,11 @@ reply(`${e}`)
 }
 })
 
-cmd({
-    pattern: "open",
-    desc: "open groups",
-    category: "owner",
-    filename: __filename
-},
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-
-if(!isGroup) return
-        
-        if(!groupAdmins) return reply(`*_You are not admin._*`)
-          
-        await conn.groupSettingUpdate(from, 'not_announcement')
-
-reply(`*_Group opened_*`)
-  
-}catch(e){
-console.log(e)
-reply(`${e}`)
-
-}
-})
-
-cmd({
-    pattern: "close",
-    desc: "close groups",
-    category: "owner",
-    filename: __filename
-},
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-
-if(!isGroup) return
-        
-        if(!groupAdmins) return reply(`*_You are not admin._*`)
-          
-        await conn.groupSettingUpdate(from, 'announcement')
-
-        reply(`*_Group closed._*`)
-  
-}catch(e){
-console.log(e)
-reply(`${e}`)
-
-}
-})
 
 cmd({
     pattern: "link",
     desc: "close groups",
-    category: "owner",
+    category: "other",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
