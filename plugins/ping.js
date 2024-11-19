@@ -17,7 +17,7 @@ if(blockGrp.includes(from)) return
 
     const startTime = Date.now()
   
-        const response = await conn.sendMessage(from, { text: '*_Pinging INFINITY WA Bot..._*' }, {quoted : mek})
+        const response = await conn.sendMessage(from, { text: '*_Pinging INFINITY MOVIE Bot..._*' }, {quoted : mek})
   
         const endTime = Date.now()
         const ping = endTime - startTime
